@@ -24,4 +24,17 @@ describe("Asynchronous Code Testing", () => {
 
         fetchData(callback);
     });
+});
+
+describe("Promises", () =>{
+    test("The data returns 'Black Forest Cake'", () => {
+        function fetchData(){
+            return new Promise((resolve,reject)=>{
+                resolve("Black Forest Cake");
+            });
+        }
+        return fetchData().then(data => {
+            expect(data).toBe("Black Forest Cake");
+        });
+    });
 })
