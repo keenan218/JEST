@@ -37,4 +37,22 @@ describe("Promises", () =>{
             expect(data).toBe("Black Forest Cake");
         });
     });
-})
+    test("The fetch fails with an error", () => {
+        function fetchData() {
+            return new Promise((resolve, reject) => {
+                reject("error");
+            });
+        }
+        expect.assertions(1);
+        return fetchData().catch(e => expect(e).toMatch('error'));
+    });
+
+    test("The data is spag bol", () => {
+        function fetchData() {
+            return new Promise((resolve, reject) => {
+                resolve("spag bol");
+            });
+        }
+        return expect(fetchData()).resolves.toBe("spag bol");
+    });
+});
