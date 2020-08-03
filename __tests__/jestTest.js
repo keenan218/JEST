@@ -53,6 +53,43 @@ describe("Numbers", () => {
         const value = 0.1 + 0.2;
         // expect(value).toBe(0.3); this won't work because of rounding error
         expect(value).toBeCloseTo(0.3);
-    })
-})
+    });
+});
+
+describe("Strings", () =>{
+    test("There is no i in 'team'", () => {
+        expect('team').not.toMatch(/i/);
+    });
+
+    test("But there is a lie in 'believe'", () => {
+        expect("believe").toMatch(/lie/);
+    });
+});
+
+describe("Arrays and Iterables", () => {
+    const shoppingList = [
+        'apples',
+        'chicken',
+        'cheese',
+        'paper towels',
+        'wine',
+    ];
+
+    test("The shopping list has wine on it", () => {
+        expect(shoppingList).toContain("wine");
+        // expect(new Set(shoppingList)).toContain('beer'); // Fails
+        expect(new Set(shoppingList)).toContain('wine');
+    });
+});
+
+describe("Exceptions", () => {
+    function compileCode() {
+        throw new Error("Oops.. looks like you're using the wrong JDK");
+    }
+
+    test("compiling code goes as expected...", () => {
+        expect(compileCode).toThrow();
+        expect(compileCode).toThrow(Error);
+    });
+});
 
