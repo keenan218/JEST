@@ -16,3 +16,25 @@ describe("Common Matchers", () => {
         }
     });
 });
+
+describe("Truthiness", () => {
+    test("Null", () => {
+        const n = null;
+        expect(n).toBeNull();
+        expect(n).toBeDefined();
+        expect(n).not.toBeUndefined();
+        expect(n).not.toBeTruthy();
+        expect(n).toBeFalsy();
+    });
+
+    test('zero', () => {
+        const z = 0;
+        expect(z).not.toBeNull();         // true
+        expect(z).toBeDefined();          // true
+        expect(z).not.toBeUndefined();    // true
+        expect(z).not.toBeTruthy();       // true
+        expect(z).toBeFalsy();            // true
+    });
+})
+
+
