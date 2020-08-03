@@ -99,3 +99,43 @@ describe("Exceptions", () => {
     });
 });
 
+describe("Tutorial Example", () => {
+    const can1 = {
+        flavour: "strawberry",
+        ounces: 12
+    };
+    const can2 = {
+        flavour: "strawberry",
+        ounces: 12
+    }
+  
+        test('have all the same properties', () => {
+            expect(can1).toEqual(can2);
+        });
+        test('are not the exact same can', () => {
+            expect(can1).not.toBe(can2);
+        });
+    });
+
+describe("Test", () => {
+    const houseForSale = {
+        bath: true,
+        bedrooms: 4,
+        kitchen: {
+            amenities: ['oven', 'stove', 'washer'],
+            area: 20,
+            wallColor: 'white',
+        },
+    };
+    const desiredHouse = {
+        bath: true,
+        kitchen: {
+            amenities: ['oven', 'stove', 'washer'],
+            wallColor: expect.stringMatching(/white|yellow/),
+        },
+    };
+
+    test('the house has my desired features', () => {
+        expect(houseForSale).toMatchObject(desiredHouse);
+    });
+})
