@@ -47,6 +47,11 @@ describe("Numbers", () => {
 
         expect(value).toBe(4);
         expect(value).toEqual(4);
+    });
+
+    test("Adding floating numbers", () => {
+        const value = 0.1 + 0.2;
+        expect(value).toBe(0.3);
     })
 })
 
