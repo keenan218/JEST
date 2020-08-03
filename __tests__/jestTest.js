@@ -91,5 +91,11 @@ describe("Exceptions", () => {
         expect(compileCode).toThrow();
         expect(compileCode).toThrow(Error);
     });
+
+    // You can also use the exact error message or regex expression
+    test("compiling code with regex", () => {
+        expect(compileCode).toThrow("Oops.. looks like you're using the wrong JDK");
+        expect(compileCode).toThrow(/JDK/);
+    });
 });
 
