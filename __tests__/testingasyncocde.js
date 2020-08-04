@@ -63,5 +63,30 @@ describe("Promises", () =>{
             })
         }
         return expect(fetchData()).rejects.toMatch("Error");
+    });
+
+    test("The data is 'Bubble Tea'", async () => {
+        function fetchData(){
+            return new Promise((resolve, reject) => {
+                resolve("Bubble Tea");
+            })
+        }
+        const data = await fetchData();
+        expect(data).toBe("Bubble Tea");
+    });
+
+    test("The Async function fails", async () => {
+        function fetchData(){
+            return new Promise((resolve, reject) => {
+                reject("Error");
+            });
+        }
+        expect.assertions(1);
+        try{
+            await fetchData(); 
+        }
+        catch(uhho){
+            expect(uhho).toMatch("Error");
+        }
     })
 });
