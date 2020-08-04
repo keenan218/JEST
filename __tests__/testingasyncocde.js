@@ -55,4 +55,13 @@ describe("Promises", () =>{
         }
         return expect(fetchData()).resolves.toBe("spag bol");
     });
+
+    test("The fetch fails with an error", () =>{
+        function fetchData(){
+            return new Promise((resolve,reject) => {
+                reject("Error");
+            })
+        }
+        return expect(fetchData()).rejects.toMatch("Error");
+    })
 });
