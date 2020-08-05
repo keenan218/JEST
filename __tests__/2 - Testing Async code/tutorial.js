@@ -1,4 +1,4 @@
-import {simpleFunc, asyncfunction1, iUseAwait, getUsers} from "../src/functions";
+import {simpleFunc, asyncfunction1, iUseAwait, getUsers} from "../../src/functions";
 
 // describe("A simple module", () => {
 //     test("it should say hello", () => {
