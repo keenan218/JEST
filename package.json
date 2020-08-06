@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node src/functions.js",
+    "start": "node src/functions.js",
     "test": "jest"
   },
-  "type":"module",
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.2.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
   }
 }
