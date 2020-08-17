@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentWithProps render tests should render the correct values when rendering the nextNumberDisplay 1`] = `
+Array [
+  1,
+  2,
+  3,
+]
+`;
