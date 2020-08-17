@@ -10,9 +10,9 @@ const infinitetimergame = callback => {
         setTimeout(()=>{
             infinitetimergame(callback);
         },10000);
-    },10000);
+    },1000);
 }
 
-infinitetimergame(()=>console.log("hi"));
+// infinitetimergame(()=>console.log("hi"));
 
 module.exports = infinitetimergame;
