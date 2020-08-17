@@ -12,3 +12,9 @@ it('renders correctly when there is a single item', () => {
   const tree = renderer.create(<Items items={item}/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+it('renders correctly when there are multiple items', () => {
+  const item = ['Something','Very', 'Important'];
+  const tree = renderer.create(<Items items={item} />).toJSON();
+  expect(tree).toMatchSnapshot();
+});

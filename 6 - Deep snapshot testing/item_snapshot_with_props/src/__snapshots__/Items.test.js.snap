@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders correctly when there are multiple items 1`] = `
+<ul>
+  <li>
+    Something
+  </li>
+  <li>
+    Very
+  </li>
+  <li>
+    Important
+  </li>
+</ul>
+`;
+
 exports[`renders correctly when there are no items 1`] = `
 <span>
   No items in list
