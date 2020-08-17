@@ -6,3 +6,9 @@ it('renders correctly when there are no items', () => {
   const tree = renderer.create(<Items />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+it('renders correctly when there is a single item', () => {
+  const item = ['Something'];
+  const tree = renderer.create(<Items items={item}/>).toJSON();
+  expect(tree).toMatchSnapshot();
+});

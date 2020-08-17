@@ -5,3 +5,9 @@ exports[`renders correctly when there are no items 1`] = `
   No items in list
 </span>
 `;
+
+exports[`renders correctly when there is a single item 1`] = `
+<span>
+  Something
+</span>
+`;
