@@ -4,5 +4,10 @@
   },
   "devDependencies": {
     "jest": "^26.2.2"
+  },
+  "dependencies": {
+    "fetch-mock": "^9.10.7",
+    "jest-fetch-mock": "^3.0.3",
+    "node-fetch": "^2.6.0"
   }
 }
